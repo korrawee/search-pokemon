@@ -1,0 +1,35 @@
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.pokemon__img {
+  align-self: center;
+  border-radius: 12px;
+  object-fit: fill;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+dt {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+dt:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.data {
+  font-size: 18px;
+  font-weight: normal;
+  padding: 5px 2ch;
+}
+
+.pokemon__evol__container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+}
