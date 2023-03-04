@@ -1,7 +1,7 @@
-import { IHomeCompoment } from './HomeCompomentCompoment';
+import { IHomeCompoment } from './HomeCompoment';
 
 const base: IHomeCompoment = {};
 
-export const mockHomeCompomentProps = {
+export const mockHomeProps = {
   base,
 };
