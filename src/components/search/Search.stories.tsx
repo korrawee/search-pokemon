@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Search, { ISearch } from './Search';
+import { Search, ISearch } from './Search';
 import { mockSearchProps } from './Search.mocks';
 
 export default {
@@ -10,9 +10,7 @@ export default {
 } as ComponentMeta<typeof Search>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Search> = (args) => (
-  <Search {...args} />
-);
+const Template: ComponentStory<typeof Search> = (args) => <Search {...args} />;
 
 export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args

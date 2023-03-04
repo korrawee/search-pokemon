@@ -1,37 +1,39 @@
-import { FormEvent, useState } from 'react';
 import styles from './Search.module.css';
 
+// Search component interface
 export interface ISearch {
   placeHolder: string;
+  searchText: string;
+  handleSearch: Function;
+  setSearchText: Function;
 }
 
-const Search: React.FC<ISearch> = ({ placeHolder }) => {
-  const [val, setVal] = useState('');
-  const [tmp, setTmp] = useState('');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setVal(e.target.value);
+export const Search: React.FC<ISearch> = ({
+  placeHolder,
+  searchText,
+  handleSearch,
+  setSearchText,
+}) => {
+  // Update search text
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchText(e.target.value);
   };
-  const handleInputSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    setTmp(val);
-    e.preventDefault();
+
+  // User hits 'Enter' Handler
+  const handleUserInput = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
   };
 
   return (
-    <>
-      <h1>{val}</h1>
-      <form onSubmit={e => handleInputSubmit(e)}>
-        <input
-          className={styles.search__input}
-          value={val}
-          placeholder={placeHolder}
-          onChange={(e) => handleInputChange(e)}
-          type="search"
-        />
-      </form>
-      <h1>{tmp}</h1>
-    </>
+    <input
+      className={styles.search__input}
+      value={searchText}
+      placeholder={placeHolder}
+      onChange={(e) => handleChange(e)}
+      onKeyUp={(e) => handleUserInput(e)}
+      type="search"
+    />
   );
 };
-
-export default Search;
