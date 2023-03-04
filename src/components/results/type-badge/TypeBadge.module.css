@@ -1,0 +1,11 @@
+.container {
+  display: inline-block;
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 0.2rem;
+}
+
+.type__text {
+}
