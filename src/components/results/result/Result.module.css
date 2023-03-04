@@ -1,8 +1,8 @@
-
 .main__container {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  margin-top: 2rem;
 }
 
 .pokemon__img {
@@ -12,12 +12,12 @@
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
-dt {
+.pokemon__info {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: bolder !important;
 }
 
-dt:not(:first-child) {
+.pokemon__info:not(:first-child) {
   margin-top: 1rem;
 }
 
@@ -25,6 +25,18 @@ dt:not(:first-child) {
   font-size: 18px;
   font-weight: normal;
   padding: 5px 2ch;
+}
+.link {
+  width: fit-content;
+  margin: auto;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 5px 2ch;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
 
 .pokemon__evol__container {

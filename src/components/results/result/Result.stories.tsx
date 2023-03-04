@@ -1,24 +1,21 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import PokemonInfo, { IPokemonInfo } from './PokemonInfo';
-import { mockPokemonInfoProps } from './PokemonInfo.mocks';
+import Result, { IResult } from './Result';
+import { mockResultProps } from './Result.mocks';
 
 export default {
-  title: 'templates/PokemonInfo',
-  component: PokemonInfo,
+  title: 'templates/Result',
+  component: Result,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof PokemonInfo>;
+} as ComponentMeta<typeof Result>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof PokemonInfo> = (args) => (
-  <PokemonInfo {...args} />
-);
+const Template: ComponentStory<typeof Result> = (args) => <Result {...args} />;
 
 export const Base = Template.bind({});
-
 
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 
 Base.args = {
-  ...mockPokemonInfoProps.base,
-} as IPokemonInfo;
+  ...mockResultProps.base,
+} as IResult;
