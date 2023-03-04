@@ -1,6 +1,6 @@
 import { ISection } from './Section';
 
-function ChildComponent(): JSX.Element {
+function ChildComponent() {
   return <h1>Hello</h1>;
 }
 
