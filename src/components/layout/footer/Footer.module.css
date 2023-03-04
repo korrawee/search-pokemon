@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto auto;
+  height: 10ch;
+  background-color: #f0dbdb;
+  margin-top: 2rem;
+}
+
+.copyright {
+  color: rgb(36, 36, 36, 0.9);
+  font-size: 18px;
+}
