@@ -1,5 +1,5 @@
-import Result, { Pokemon } from '../../components/results/result/Result';
-import { Search } from '../../components/search/Search';
+import Result, { Pokemon } from '../results/result/Result';
+import { Search } from '../search/Search';
 import { useEffect, useState } from 'react';
 import { useLazyQuery } from '@apollo/client';
 import Head from 'next/head';
